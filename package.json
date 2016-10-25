@@ -1,0 +1,32 @@
+{
+  "name": "paper-markdown",
+  "version": "1.0.1",
+  "description": "博客转换成markdown并写入本地文件的工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfyr111/paper-markdown.git"
+  },
+  "bin": {
+    "convert": "bin/convert.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "download": "^5.0.2",
+    "downshow": "^0.1.0",
+    "html-extract": "0.0.1",
+    "html-md": "^3.0.2",
+    "html-to-markdown": "^1.0.0",
+    "html2md": "^0.1.1",
+    "to-markdown": "^3.0.2"
+  },
+  "author": "sfyr111",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sfyr111/paper-markdown/issues"
+  },
+  "homepage": "https://github.com/sfyr111/paper-markdown#readme"
+}
