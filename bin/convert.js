@@ -42,19 +42,19 @@ fs.watchFile(__dirname.slice(0,-4) + '/post/down.html', {interval: 100}, functio
           var dom = $('.show-content').html();
           // console.log(md(dom));
           if(typeof(dom) === 'string'){
-            fs.unlink(__dirname.slice(0,-4) + '/post/test.txt');
-            fs.open(__dirname.slice(0,-4) + '/post/test.txt', 'w', function(err){
-              console.log(__dirname.slice(0,-4) + '/post/test.txt');
+            fs.unlink(__dirname.slice(0,-4) + '/post/test.md');
+            fs.open(__dirname.slice(0,-4) + '/post/test.md', 'w', function(err){
+              console.log(__dirname.slice(0,-4) + '/post/test.md');
               if(err){
                 console.log(err);
               }
-              fs.writeFile(__dirname.slice(0,-4) + '/post/test.txt', md(dom), {flag: 'a'}, function (err) {
+              fs.writeFile(__dirname.slice(0,-4) + '/post/test.md', md(dom), {flag: 'a'}, function (err) {
                  if(err) {
                   console.error(err);
                   } else {
                      console.log('写入成功');
                      console.log('-----------------复制以下命令打开文件---------------')
-                     console.log('\nopen ' + __dirname.slice(0,-4) + '/post/test.txt\n');
+                     console.log('\nopen ' + __dirname.slice(0,-4) + '/post/test.md\n');
                      console.log('-------------------------------------------------')
                      process.exit();
                   }
