@@ -1,6 +1,6 @@
 {
   "name": "paper-markdown",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "http://www.jianshu.com 简书博客转换成markdown并写入本地文件的工具",
   "main": "index.js",
   "scripts": {

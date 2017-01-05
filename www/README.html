@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>README--- 饥人谷</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab, jirengu">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="http://cdn.jirengu.com/ppt-cli/css/reveal.css">
+		<link rel="stylesheet" href="http://cdn.jirengu.com/ppt-cli/css/theme/league.css" id="theme">
+		
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="http://cdn.jirengu.com/ppt-cli/css/zenburn.css">
+
+		<!--[if lt IE 9]>
+		<script src="http://cdn.jirengu.com/ppt-cli/js/lib/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides align-center">
+			 <section><h1>server-mock</h1>
+<p>server-mock &#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x597D;&#x7528;&#x7684;&#x7528;&#x4E8E;&#x524D;&#x540E;&#x7AEF;&#x5206;&#x79BB;&#x7684; mock &#x5229;&#x5668;&#xFF0C; &#x57FA;&#x4E8E; express &#x5F00;&#x53D1;&#xFF0C;&#x53EF;&#x65B9;&#x4FBF;&#x7684; mock &#x6570;&#x636E;&#x3002;</p>
+<p>&#x548C;&#x4E00;&#x822C;&#x57FA;&#x4E8E;&#x914D;&#x7F6E;&#x7684; mock &#x5DE5;&#x5177;&#x4E0D;&#x540C;&#xFF0C;server-mock&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4F7F;&#x7528;&#x8303;&#x4F8B;&#xFF0C;&#x8BA9;&#x4F7F;&#x7528;&#x8005;&#x53EF;&#x8BA9;&#x4F7F;&#x7528;&#x8005;&#x6A21;&#x4EFF;&#x8303;&#x4F8B;&#x7B80;&#x5355;&#x5FEB;&#x6377;&#x7684;&#x5B9E;&#x73B0;&#x9700;&#x6C42;&#x3002;</p>
+</section><section class="down"><section class="h2"><h2>&#x5DE5;&#x5177;&#x539F;&#x7406;</h2>
+<p>&#x524D;&#x7AEF;&#x548C;&#x540E;&#x7AEF;&#x5DE5;&#x4F5C;&#x7684;&#x4EA4;&#x96C6;&#x4F53;&#x73B0;&#x5728;&#x4E24;&#x4E2A;&#x65B9;&#x9762;&#xFF1A;</p>
+<ol>
+<li>&#x540E;&#x7AEF;&#x6A21;&#x677F;&#x7684;&#x6E32;&#x67D3;&#xFF1B;</li>
+<li>ajax &#x63A5;&#x53E3;&#x7684;&#x5904;&#x7406;&#x3002;</li>
+</ol>
+<p>&#x5728;&#x524D;&#x7AEF;&#x5728;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0E;&#x540E;&#x7AEF;&#x5728;&#x6B63;&#x5F0F;&#x8054;&#x8C03;&#x524D;&#x5FC5;&#x987B;&#x8981;&#x8FDB;&#x884C;&#x81EA;&#x6D4B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x81EA;&#x5DF1;&#x9700;&#x8981;&#x642D;&#x5EFA;&#x4E2A;&#x540E;&#x7AEF;&#x7F51;&#x7AD9;&#x96CF;&#x5F62;&#x6765;&#x6A21;&#x62DF;&#x6570;&#x636E;&#xFF0C;&#x7528;&#x6765;&#x5904;&#x7406;&#x81EA;&#x5DF1;&#x524D;&#x7AEF;&#x7684;ajax&#x8BF7;&#x6C42;&#x4EE5;&#x53CA;&#x6A21;&#x677F;&#x6E32;&#x67D3;&#x3002; &#x8017;&#x65F6;&#x8D39;&#x529B;&#xFF0C;&#x5BF9;&#x521A;&#x521A;&#x4F1A;&#x4F7F;&#x7528; ajax &#x65E0;&#x4EFB;&#x4F55;&#x540E;&#x7AEF;&#x7ECF;&#x9A8C;&#x7684;&#x540C;&#x5B66;&#x7B80;&#x76F4;&#x662F;&#x5669;&#x68A6;&#x3002;</p>
+</section><section class="h3"><h3>server-mock &#x5982;&#x4F55;&#x89E3;&#x653E;&#x751F;&#x6210;&#x529B;&#x5462;&#xFF1F;</h3>
+<p>server-mock&#x672C;&#x8D28;&#x4E0A;&#x5C31;&#x662F; &#x57FA;&#x4E8E; node express&#x7F51;&#x7AD9;&#x7684;&#x7B80;&#x5316;&#x4FEE;&#x6B63;&#x7248;&#xFF0C;&#x4F46;&#x628A;&#x4E1A;&#x52A1;&#x65E0;&#x5173;&#x7684;&#x90E8;&#x5206;&#x9690;&#x85CF;&#x8D77;&#x6765;&#x5BF9;&#x7528;&#x6237;&#x900F;&#x660E;&#xFF0C;&#x5BF9;&#x7528;&#x6237;&#x53EA;&#x66B4;&#x9732;&#x51FA;&#x7F51;&#x7AD9;&#x540E;&#x53F0;&#x7684;&#x6838;&#x5FC3;&#x2014;&#x2014;&#x8DEF;&#x7531;&#x5904;&#x7406;&#x90E8;&#x5206;&#x3002;&#x5168;&#x5C40;&#x5B89;&#x88C5;&#x5B8C;server-mock&#x540E;&#x53EF;&#x5728;&#x4EFB;&#x4F55;&#x5730;&#x65B9;&#x4F7F;&#x7528;mock &#x547D;&#x4EE4;&#xFF0C;&#x628A;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x53D8;&#x4E3A; webserver &#x76EE;&#x5F55;&#x3002;&#x7528;&#x6237;&#x53EA;&#x8981;&#x5728;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x5199;&#x597D; html &#x6587;&#x4EF6;&#x4E8E;ajax &#x8BF7;&#x6C42;&#x63A5;&#x53E3;&#xFF0C;&#x5728;router.js &#x4F7F;&#x7528; js &#x8BED;&#x6CD5;&#x5199;&#x597D;&#x5BF9;&#x5E94;&#x8BF7;&#x6C42;&#x7684;&#x54CD;&#x5E94;&#x5904;&#x7406;&#x5C31;&#x884C;&#x4E86;&#x3002;</p>
+</section><section class="h3"><h3></h3>
+<p>&#x6BD4;&#x5982;, &#x5728;index.html&#x91CC;&#x6709;get &#x8BF7;&#x6C42;</p>
+<pre><code> $.get(&apos;/hello&apos;).done(function(ret){
+  	console.log(ret);
+  });
+</code></pre>
+</section><section class="h3"><h3></h3>
+<p>&#x5728; router.js&#x91CC;&#x53EA;&#x9700;&#x8981;&#x5199;&#x4E0B;&#x76F8;&#x5E94;&#x7684;&#x76F8;&#x5E94;&#x5C31;&#x884C;</p>
+<pre><code>app.get(&apos;/hello&apos;, function(req, res) {
+	res.send({
+		status: 0,
+		msg: &quot;hello &#x9965;&#x4EBA;&#x8C37;&quot;
+	});
+});
+</code></pre>
+<p>server-mock&#x8FD8;&#x652F;&#x6301;&#x9875;&#x9762;&#x8DEF;&#x7531;&#x89E3;&#x6790;&#x4E0E;&#x6A21;&#x677F;&#x6E32;&#x67D3;&#xFF0C;&#x5728;router.js&#x91CC;&#x8BBE;&#x7F6E;&#x597D;&#x5BF9;&#x5E94;&#x8DEF;&#x7531;&#x4E0B;&#x9700;&#x8981;&#x5C55;&#x793A;&#x7684;&#x6570;&#x636E;&#x4EE5;&#x53CA;&#x5BF9;&#x5E94;&#x7684;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#xFF0C;&#x5373;&#x53EF;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x770B;&#x5230;&#x6E32;&#x67D3;&#x540E;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+</section></section><section class="h2"><h2>&#x5B89;&#x88C5;</h2>
+<pre><code>npm install -g server-mock
+</code></pre>
+</section><section class="down"><section class="h2"><h2>&#x4F7F;&#x7528;</h2>
+</section><section class="h3"><h3>1. &#x5207;&#x6362;&#x5230;&#x9879;&#x76EE;&#x6587;&#x4EF6;&#x5939;</h3>
+<pre><code>cd myTargetFolder
+</code></pre>
+</section><section class="h3"><h3>2. &#x521D;&#x59CB;&#x5316;&#x4F7F;&#x7528;&#x8303;&#x4F8B;</h3>
+<pre><code>mock init
+</code></pre>
+<p>&#x6B64;&#x65F6;<code>myTargetFolder&#x4E0B;</code>&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210; <code>index.html</code> &#x3001;<code>router.js</code>&#x3001;<code>user.ejs</code>&#x3002; &#x5176;&#x4E2D;index.html&#x662F;&#x524D;&#x7AEF;&#x9759;&#x6001; html&#xFF0C;&#x91CC;&#x9762;&#x6709; ajax &#x7684;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x3002; <code>router.js</code> &#x662F;&#x540E;&#x7AEF;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x7531;&#x5904;&#x7406;&#x8303;&#x4F8B;&#x6587;&#x4EF6;&#xFF0C;&#x5F53;mock-server&#x542F;&#x52A8;&#x540E;&#x8BF7;&#x6C42;&#x4F1A;&#x88AB;&#x8BE5;&#x6587;&#x4EF6;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x7531;&#x63A5;&#x53E3;&#x5904;&#x7406;&#x3002; <code>user.ejs</code>&#x662F;&#x6A21;&#x677F;&#x8303;&#x4F8B;&#xFF0C;&#x5F53;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x6A21;&#x677F;&#x65F6;&#x53EF;&#x4EE5;&#x5728; router.js&#x91CC;&#x6E32;&#x67D3;&#x8BE5;&#x6A21;&#x677F;&#x3002;</p>
+</section><section class="h3"><h3>3. &#x542F;&#x52A8; webserver</h3>
+<pre><code>mock start
+</code></pre>
+<p>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165; http://localhost:8080 &#x5373;&#x53EF;&#x9884;&#x89C8;</p>
+</section></section><section class="h2"><h2>&#x8BE6;&#x7EC6;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h2>
+<pre><code>mock start --port 3000         // &#x8BBE;&#x7F6E;&#x670D;&#x52A1;&#x5668;&#x542F;&#x52A8;&#x7AEF;&#x53E3;&#x4E3A;3000
+mock start --public public    //&#x8BBE;&#x7F6E;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x4E3A;&#x5F53;&#x524D;&#x6587;&#x4EF6; public &#x76EE;&#x5F55;&#x3002;&#x9ED8;&#x8BA4;&#x662F;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;
+mock start --views views     //&#x8BBE;&#x7F6E;&#x6A21;&#x677F;&#x8DEF;&#x5F84;&#x4E3A;&#x5F53;&#x524D;&#x6587;&#x4EF6; views &#x76EE;&#x5F55;&#x3002;&#x9ED8;&#x8BA4;&#x662F;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;
+mock start --tpl ejs        //&#x8BBE;&#x7F6E;&#x6A21;&#x677F;&#xFF0C;&#x652F;&#x6301; ejs, jade
+mock start --tpl ejs --port 3000&quot;  //&#x8BBE;&#x7F6E;&#x6A21;&#x677F;&#x4E3A;ejs,&#x7AEF;&#x53E3;&#x4E3A;3000&#x3002; &#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x662F;8080
+
+</code></pre>
+</section><section class="h2"><h2>&#x4F5C;&#x8005;</h2>
+<p>&#x9965;&#x4EBA;&#x8C37;-&#x82E5;&#x611A;</p>
+<p>&#x6B22;&#x8FCE;&#x5927;&#x5BB6; pull request&#xFF0C;&#x5171;&#x540C;&#x5B8C;&#x5584;&#x6700;&#x7B80;&#x5355;&#x65E0;&#x8111;&#x7684; mock &#x5DE5;&#x5177;</p>
+</section>
+			</div>
+
+		</div>
+
+		<script src="http://cdn.jirengu.com/ppt-cli/js/lib/head.min.js"></script>
+		<script src="http://cdn.jirengu.com/ppt-cli/js/lib/reveal.js"></script>
+		<script src="http://cdn.jirengu.com/ppt-cli/js/lib/classList.js"></script>
+		<script src="http://cdn.jirengu.com/ppt-cli/js/plugin/highlight/highlight.js"></script>
+		<script src="http://cdn.jirengu.com/ppt-cli/js/plugin/zoom-js/zoom.js"></script>
+		<script src="http://cdn.jirengu.com/ppt-cli/js/plugin/notes/notes.js"></script>
+
+		
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				transition: 'slide' // none/fade/slide/convex/concave/zoom
+			});
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+			    runScript(event.currentSlide);
+			} );
+
+			hljs.initHighlightingOnLoad();
+
+			function runScript(section){
+				var scriptStr = section.getAttribute('data-script');
+				if(scriptStr){
+					scriptStr = decodeURIComponent(scriptStr);
+					var tag = document.createElement('script');
+					tag.innerHTML = scriptStr;
+					document.head.appendChild(tag);
+				}
+
+			}
+		</script>
+
+	</body>
+</html>

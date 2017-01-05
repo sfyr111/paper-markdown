@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>test--- 饥人谷</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab, jirengu">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="http://cdn.jirengu.com/ppt-cli/css/reveal.css">
+		<link rel="stylesheet" href="http://cdn.jirengu.com/ppt-cli/css/theme/league.css" id="theme">
+		
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="http://cdn.jirengu.com/ppt-cli/css/zenburn.css">
+
+		<!--[if lt IE 9]>
+		<script src="http://cdn.jirengu.com/ppt-cli/js/lib/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides align-center">
+			<ul>
+<li>
+<p>dom&#x5BF9;&#x8C61;&#x7684;innerText&#x548C;innerHTML&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#xFF1F;</p>
+<ul>
+<li>
+<p><strong>innerHTML</strong>&#x6307;&#x7684;&#x662F;<strong>&#x4ECE;&#x5BF9;&#x8C61;&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5230;&#x7EC8;&#x6B62;&#x4F4D;&#x7F6E;&#x7684;&#x5168;&#x90E8;&#x5185;&#x5BB9;,&#x5305;&#x62EC;Html&#x6807;&#x7B7E;</strong>&#x3002;</p>
+</li>
+<li>
+<p><strong>innerText</strong> &#x6307;&#x7684;&#x662F;<strong>&#x4ECE;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5230;&#x7EC8;&#x6B62;&#x4F4D;&#x7F6E;&#x7684;&#x5185;&#x5BB9;,&#x4F46;&#x5B83;&#x53BB;&#x9664;Html&#x6807;&#x7B7E;</strong>&#x3002;</p>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-0a6601d83316c7ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+<div class="image-caption">innerHTML&#x3001;innerText&#x7684;&#x533A;&#x522B;</div>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>elem.children&#x548C;elem.childNodes&#x7684;&#x533A;&#x522B;&#xFF1F;</p>
+<ul>
+<li>
+<p>elem.childNodes&#x5C5E;&#x6027;&#x4E3A;&#x6807;&#x51C6;&#x5C5E;&#x6027;&#xFF0C;&#x662F;&#x53EA;&#x8BFB;&#x7684;&#x7C7B;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;(NodeList&#x5BF9;&#x8C61;)&#xFF0C;&#x8868;&#x793A;&#x8BE5;&#x8282;&#x70B9;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x5B50;&#x8282;&#x70B9;,&#x8BE5;&#x5C5E;&#x6027;&#x8FD4;&#x56DE;&#x7684;&#x8FD8;&#x5305;&#x62EC;Text&#x8282;&#x70B9;(&#x6362;&#x884C;&#x3001;&#x7A7A;&#x683C;)&#x548C;Comment(&#x6CE8;&#x91CA;)&#x8282;&#x70B9;&#x3002;</p>
+</li>
+<li>
+<p>elem.children&#x5C5E;&#x6027;&#x4E3A;&#x975E;&#x6807;&#x51C6;&#x5C5E;&#x6027;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x6570;&#x7EC4;&#x7684;&#x52A8;&#x6001;&#x5BF9;&#x8C61;&#xFF08;&#x5B9E;&#x65F6;&#x53CD;&#x6620;&#x53D8;&#x5316;&#xFF09;&#xFF0C;&#x5305;&#x62EC;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x5B50;&#x5143;&#x7D20;&#x3002;</p>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-ccbb6a93ac3bb120.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+<div class="image-caption">elem.children&#x3001;elem.childNodes&#x7684;&#x533A;&#x522B;</div>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x67E5;&#x8BE2;&#x5143;&#x7D20;&#x6709;&#x51E0;&#x79CD;&#x5E38;&#x89C1;&#x7684;&#x65B9;&#x6CD5;&#xFF1F;</p>
+<ul>
+<li>
+<p>&#x901A;&#x8FC7;ID&#x9009;&#x53D6;&#x5143;&#x7D20;&#xFF1A;getElementById&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x5339;&#x914D;&#x6307;&#x5B9A;ID&#x5C5E;&#x6027;&#x7684;&#x5143;&#x7D20;&#x8282;&#x70B9;&#x3002;</p>
+<pre><code>var id = document.getElementById(&apos;id&apos;);
+</code></pre>
+</li>
+<li>
+<p>&#x901A;&#x8FC7;CSS&#x7C7B;&#x9009;&#x53D6;&#x5143;&#x7D20;: getElementsByClassName&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;&#xFF0C;&#x662F;NodeList&#x5BF9;&#x8C61;&#xFF0C;&#x5305;&#x542B;&#x6240;&#x6709;&#x5339;&#x914D;&#x7684;&#x540E;&#x4EE3;&#x8282;&#x70B9;&#x3002;</p>
+<pre><code>var class1 = document.getElementsByClassName(&apos;class&apos;)[0];
+var class2 = document.getElementsByClassName(&apos;class&apos;)[1];
+var class3 = document.getElementsByClassName(&apos;classA classB&apos;);
+</code></pre>
+</li>
+<li>
+<p>&#x901A;&#x8FC7;&#x6807;&#x7B7E;&#x540D;&#x9009;&#x53D6;&#x5143;&#x7D20;&#xFF1A;getElementsByTagName()&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x9009;&#x53D6;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#x540D;&#x7684;HTML&#x5143;&#x7D20;,&#x8FD4;&#x56DE;&#x7684;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x6570;&#x7EC4;NodeList&#x5BF9;&#x8C61;&#x3002;</p>
+<pre><code>var tag = document.getElementsByClassName(&apos;p&apos;);[0]
+</code></pre>
+</li>
+<li>
+<p>&#x901A;&#x8FC7;&#x540D;&#x5B57;name&#x9009;&#x53D6;&#x5143;&#x7D20;&#xFF1A;getElementsByName()&#x65B9;&#x6CD5;&#x6839;&#x636E;name&#x5C5E;&#x6027;&#x7684;&#x503C;&#x9009;&#x53D6;HTML&#x5143;&#x7D20;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x7C7B;&#x6570;&#x7EC4;NodeList&#x5BF9;&#x8C61;&#x3002;</p>
+<pre><code>var name = document.getElementsByName(&apos;name&apos;);[0]
+</code></pre>
+</li>
+<li>
+<p>&#x901A;&#x8FC7;CSS&#x9009;&#x62E9;&#x5668;&#x9009;&#x53D6;&#x5143;&#x7D20;&#xFF1A;<br>
+1 querySelector()&#x65B9;&#x6CD5;&#xFF1A;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;CSS&#x9009;&#x62E9;&#x7B26;&#xFF0C;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x5339;&#x914D;&#x5143;&#x7D20;&#x8FD4;&#x56DE;null&#x3002;<br>
+2 querySelectorAll()&#x65B9;&#x6CD5;&#xFF1A;&#x63A5;&#x53D7;&#x65B9;&#x6CD5;&#x6708;querySelector()&#x4E00;&#x6837;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;NodeList&#x7C7B;&#x6570;&#x7EC4;&#x3002;</p>
+<pre><code>var el1 = document.querySelector(&quot;.class&quot;);//&#x9009;&#x4E2D;class&#x7C7B;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;
+var el2 = document.querySelectorAll(&apos;#id &gt; span&apos;);//&#x9009;&#x4E2D;id&#x5143;&#x7D20;&#x7684;&#x5B50;&#x5143;&#x7D20;&#x4E2D;&#x6240;&#x6709;&#x7684;span&#x5143;&#x7D20;
+var el3 = document.querySelectorAll(&quot;div.id1, div.id2&quot;);//&#x9009;&#x4E2D;id&#x4E3A;id1&#x6216;id2&#x7684;&#x5143;&#x7D20;
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF1F;&#x5982;&#x4F55;&#x7ED9;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;&#x5C5E;&#x6027;&#xFF1F;</p>
+<ul>
+<li>
+<p>&#x751F;&#x6210;HTML&#x5143;&#x7D20;&#x8282;&#x70B9;&#xFF1A;createElement&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x751F;&#x6210;HTML&#x5143;&#x7D20;&#x8282;&#x70B9;&#x3002;</p>
+<pre><code>var newDiv = document.createElement(&quot;div&quot;);//&#x751F;&#x6210;&#x4E00;&#x4E2A;div&#x5143;&#x7D20;
+</code></pre>
+</li>
+<li>
+<p>&#x751F;&#x6210;&#x6587;&#x672C;&#x8282;&#x70B9;&#xFF1A;createTextNode&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x751F;&#x6210;&#x6587;&#x672C;&#x8282;&#x70B9;&#xFF0C;&#x53C2;&#x6570;&#x4E3A;&#x6240;&#x8981;&#x751F;&#x6210;&#x7684;&#x6587;&#x672C;&#x8282;&#x70B9;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<pre><code>var newContent = document.createTextNode(&quot;content&quot;);//&#x751F;&#x6210;content&#x6587;&#x672C;
+</code></pre>
+</li>
+<li>
+<p>&#x751F;&#x6210;&#x5185;&#x5B58;DOM&#x7247;&#x6BB5;&#xFF1A;createDocumentFragment&#x65B9;&#x6CD5;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5B58;&#x5728;&#x4E8E;&#x5185;&#x5B58;&#x7684;DOM&#x7247;&#x6BB5;&#x7684;DocumentFragment&#x5BF9;&#x8C61;&#x3002;DocumentFragment&#x4E0D;&#x5C5E;&#x4E8E;&#x5F53;&#x524D;&#x6587;&#x6863;&#xFF0C;&#x5BF9;&#x5B83;&#x7684;&#x4EFB;&#x4F55;&#x6539;&#x52A8;&#xFF0C;&#x90FD;&#x4E0D;&#x4F1A;&#x5F15;&#x53D1;&#x7F51;&#x9875;&#x7684;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;</p>
+<pre><code>var docFragment = document.createDocumentFragment();
+</code></pre>
+</li>
+<li>
+<p>&#x514B;&#x9686;&#x5143;&#x7D20;&#xFF1A;cloneNode()&#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x514B;&#x9686;&#x5143;&#x7D20;&#xFF0C;&#x65B9;&#x6CD5;&#x6709;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#x53C2;&#x6570;&#xFF0C;&#x4F20;&#x5165;true&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x6DF1;&#x590D;&#x5236;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4F1A;&#x590D;&#x5236;&#x5143;&#x7D20;&#x53CA;&#x5176;&#x5B50;&#x5143;&#x7D20;&#xFF08;IE&#x8FD8;&#x4F1A;&#x590D;&#x5236;&#x5176;&#x4E8B;&#x4EF6;&#xFF09;&#xFF0C;false&#x7684;&#x65F6;&#x5019;&#x53EA;&#x590D;&#x5236;&#x5143;&#x7D20;&#x672C;&#x8EAB;,&#x9ED8;&#x8BA4;&#x4E3A;false&#x3002;</p>
+<pre><code>node.cloneNode(deep);
+</code></pre>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-5be527a1fb5b061c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+<div class="image-caption">cloneNode()</div>
+</div>
+</li>
+<li>
+<p>&#x5C06;&#x5916;&#x90E8;&#x6587;&#x6863;&#x7684;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x62F7;&#x8D1D;&#x4E00;&#x4EFD;,&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x628A;&#x8FD9;&#x4E2A;&#x62F7;&#x8D1D;&#x7684;&#x8282;&#x70B9;&#x63D2;&#x5165;&#x5230;&#x5F53;&#x524D;&#x6587;&#x6863;&#x4E2D;.</p>
+<pre><code>document.importNode(node, deep);
+</code></pre>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-2524ca0ca7ff7ee8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+<div class="image-caption">document.importNode(node,deep)</div>
+</div>
+</li>
+<li>
+<p>createElement()&#xFF1A;&#x521B;&#x5EFA;HTML&#x5143;&#x7D20;</p>
+</li>
+<li>
+<p>getAttribute()&#xFF1A;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x5143;&#x7D20;&#x7684;attribute&#x503C;</p>
+</li>
+<li>
+<p>setAttribute()&#xFF1A;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x7684;attribute&#x503C;</p>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-c16544352412c180.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+<div class="image-caption">&#x521B;&#x5EFA;&#x5143;&#x7D20;&#x5E76;&#x8BBE;&#x7F6E;&#x5C5E;&#x6027;</div>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x5143;&#x7D20;&#x7684;&#x6DFB;&#x52A0;&#x3001;&#x5220;&#x9664;&#xFF1F;</p>
+<ul>
+<li>
+<p>appendChild()&#x5728;&#x5143;&#x7D20;&#x672B;&#x5C3E;&#x6DFB;&#x52A0;&#x5143;&#x7D20;</p>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-68e57933a0febc92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+<div class="image-caption">appendChild()</div>
+</div>
+</li>
+<li>
+<p>insertBefore()&#x5728;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x524D;&#x9762;&#x63D2;&#x5165;&#x5143;&#x7D20; ,&#x63D2;&#x5165;&#x7684;&#x4F4D;&#x7F6E;&#x53EF;&#x4EE5;&#x7528;parent.childNodes[n]&#x7CBE;&#x786E;&#x9009;&#x62E9;</p>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-7b89fefe7a1f6beb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+<div class="image-caption">insertBefore()</div>
+</div>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-99e005ff12f0b395.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+<div class="image-caption">parent.childNodes[n]</div>
+</div>
+</li>
+<li>
+<p>removeChild()&#x5220;&#x9664;&#x5143;&#x7D20;</p>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-cd5abdc155127ea1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+<div class="image-caption">removeChild()</div>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>DOM0 &#x4E8B;&#x4EF6;&#x548C;DOM2&#x7EA7;&#x5728;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x4E0A;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#xFF1F;</p>
+<ul>
+<li>
+<p>DOM0&#x7EA7;&#x65B9;&#x6CD5;&#x6307;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x5143;&#x7D20;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x4E8B;&#x4EF6;&#x7684;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x662F;&#x5728;&#x5143;&#x7D20;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x8FD0;&#x884C;&#x3002;&#x5176;&#x4E2D;this&#x5F15;&#x7528;&#x7684;&#x662F;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x3002;&#x4F7F;&#x7528;<code>btn.onclick = null</code>&#x5C31;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x3002;</p>
+<pre><code>var oBtn = document.getElementById(&apos;btn&apos;);
+oBtn.onclick = function(event){
+  console.log(this);
+  console.log(this.id);
+  console.log(event);
+};
+</code></pre>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-282f127578ac6995.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+<div class="image-caption">&#x7ED3;&#x679C;</div>
+</div>
+</li>
+<li>
+<p>DOM2&#x7EA7;&#x4E8B;&#x4EF6;&#x5B9A;&#x4E49;&#x4E86;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x6307;&#x5B9A;&#x548C;&#x5220;&#x9664;&#x65F6;&#x95F4;&#x5904;&#x7406;&#x7684;&#x7A0B;&#x5E8F;&#x64CD;&#x4F5C;: addEventListener()&#x548C;removeEventListener()&#x3002;DOM&#x5305;&#x542B;&#x7684;&#x8FD9;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x6709;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x5904;&#x7406;&#x7684;&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#x3001;&#x5904;&#x7406;&#x4E8B;&#x4EF6;&#x51FD;&#x6570;&#x3001;&#x5E03;&#x5C14;&#x503C;&#x3002;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x9ED8;&#x8BA4;&#x4E3A;false&#xFF0C;&#x5F53;&#x4E3A;true&#x65F6;&#x8868;&#x793A;&#x5728;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x8C03;&#x7528;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#xFF1B;&#x4E3A;false&#x65F6;&#x8868;&#x793A;&#x5728;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x8C03;&#x7528;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x3002;</p>
+<pre><code>oBtn.addEventListener(&apos;click&apos;, function(event){
+   console.log(this);
+   console.log(this.id);
+   console.log(event);
+});
+oBtn.addEventListener(&apos;click&apos;, function(){
+   console.log(&quot;&#x7B2C;&#x4E8C;&#x4E2A;&quot;);
+});
+</code></pre>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-ede767af47e315ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+<div class="image-caption">&#x7ED3;&#x679C;</div>
+</div>
+</li>
+<li>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x7ED9;&#x6309;&#x94AE;&#x6DFB;&#x52A0;&#x4E86;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#xFF0C;&#x8BE5;&#x4E8B;&#x4EF6;&#x56E0;&#x4E3A;&#x6CA1;&#x7528;&#x8BBE;&#x7F6E;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x9ED8;&#x8BA4;&#x4E3A;false&#x6240;&#x4EE5;&#x662F;&#x5728;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x8C03;&#x7528;&#x3002;&#x4E0E;DOM0&#x7EA7;&#x65B9;&#x6CD5;&#x4E00;&#x6837;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x4E5F;&#x662F;&#x5728;&#x5176;&#x4F9D;&#x9644;&#x7684;&#x5143;&#x7D20;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x8FD0;&#x884C;&#x3002;&#x4F7F;&#x7528;DOM2&#x53CA;&#x65B9;&#x6CD5;&#x6DFB;&#x52A0;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x591A;&#x4E2A;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x3002;&#x901A;&#x8FC7;addEventListener()&#x6DFB;&#x52A0;&#x7684;&#x4E8B;&#x4EF6;&#x53EA;&#x80FD;&#x4F7F;&#x7528;removeEventListener()&#x79FB;&#x9664;&#x3002;</p>
+</li>
+<li>
+<p>&#x5982;&#x679C;&#x5728;removeEventListener()&#x4E2D;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F7F;&#x7528;&#x81EA;&#x6267;&#x884C;&#x51FD;&#x6570;&#xFF0C;&#x662F;&#x6CA1;&#x6709;&#x6548;&#x679C;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x867D;&#x7136;&#x4F7F;&#x7528;&#x7684;&#x662F;addEventListener()&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x770B;&#x4E0A;&#x53BB;&#x4E00;&#x6837;&#xFF0C;&#x4F46;&#x5B8C;&#x5168;&#x4E0D;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x4E1C;&#x897F;&#x3002;&#x6240;&#x4EE5;&#x5F53;&#x8981;&#x4F7F;&#x7528;&#x79FB;&#x9664;&#x65F6;&#x8981;&#x628A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x51FD;&#x6570;&#x8D4B;&#x503C;&#x4E3A;&#x53D8;&#x91CF;&#x6307;&#x9488;&#x4E0A;&#x518D;&#x4F20;&#x5165;&#x3002;</p>
+<pre><code>btn.removeEventListener(&apos;click&apos;, function(){}, false)//&#x65E0;&#x6548;
+var handler = function(){};
+btn.removeEventListener(&apos;click&apos;, handler, false)//&#x6709;&#x6548;
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>attachEvent&#x4E0E;addEventListener&#x7684;&#x533A;&#x522B;&#xFF1F;</p>
+<ul>
+<li>attachEvent&#xFF1A;<br>
+1 &#x5C5E;&#x4E8E;DOM0&#x7EA7;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#xFF0C;&#x53EA;&#x9002;&#x7528;&#x4E8E;IE9&#x4EE5;&#x524D;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x7248;&#x672C;<br>
+2 attachEvent()&#x65B9;&#x6CD5;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;, &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x4E8B;&#x4EF6;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x5904;&#x7406;&#x7A0B;&#x5E8F;<br>
+3 &#x4E8B;&#x4EF6;&#x53C2;&#x6570;&#x524D;&#x9700;&#x8981;&#x52A0;on,&#x5199;&#x6210;attachEvent(&apos;on&apos; + type, handler)<br>
+4 attachEvent()&#x65B9;&#x6CD5;&#x53EA;&#x6709;&#x5192;&#x6CE1;&#x5904;&#x7406;&#x4E8B;&#x4EF6;<br>
+5 attachEvent()&#x65B9;&#x6CD5;&#x7684;&#x5220;&#x9664;&#x9700;&#x8981;&#x7ED9;&#x4E8B;&#x4EF6;&#x76F8;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;null<br>
+6 attachEvent()&#x65B9;&#x6CD5;&#x4F5C;&#x7528;&#x57DF;&#x4E3A;&#x5168;&#x5C40;&#x5C5E;&#x6027;this&#x6307;&#x5411;&#x662F;window&#xFF0C;&#x8FD4;&#x56DE;this.id&#x4E3A;undefined,<code>handler.apply(node)</code>&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x6539;&#x53D8;&#x4F5C;&#x7528;&#x57DF;&#x5904;&#x7406;<br>
+7 attachEvent()&#x65B9;&#x6CD5;&#x6DFB;&#x52A0;&#x591A;&#x4E2A;&#x4E8B;&#x4EF6;&#x65F6;&#x4F1A;&#x51FA;&#x73B0;&#x6DF7;&#x4E71;&#x3002;</li>
+<li>addEventListener:<br>
+1 &#x5C5E;&#x4E8E;DOM2&#x7EA7;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x65B0;&#x7248;&#x672C;&#x6D4F;&#x89C8;&#x5668;<br>
+2 addEventListener()&#x65B9;&#x6CD5;&#x6709;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x4E8B;&#x4EF6;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x5E03;&#x5C14;&#x503C;&#x9ED8;&#x8BA4;&#x4E3A;false&#xFF0C;&#x4E3A;false&#x65F6;&#x8868;&#x793A;&#x5728;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x8C03;&#x7528;&#xFF0C;true&#x8868;&#x793A;&#x5728;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x8C03;&#x7528;&#x3002;<br>
+3 &#x4E8B;&#x4EF6;&#x53C2;&#x6570;&#x5199;&#x4E3A;addEventListener(type, handler, boolean)<br>
+4 addEventListener()&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x503C;&#x64CD;&#x4F5C;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x5728;&#x6355;&#x83B7;&#x3001;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x8C03;&#x7528;&#x3002;<br>
+5 addEventListener()&#x65B9;&#x6CD5;&#x6DFB;&#x52A0;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x53EA;&#x80FD;&#x4F7F;&#x7528;removeEventListener()&#x6765;&#x79FB;&#x9664;<br>
+6 addEventListener()&#x65B9;&#x6CD5;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x662F;&#x8C03;&#x7528;&#x7684;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x4F7F;&#x7528;&#x7684;&#x4E8B;&#x4EF6;&#x76EE;&#x6807;&#xFF0C;this&#x503C;&#x6307;&#x5411;&#x7684;&#x5F53;&#x524D;&#x4E8B;&#x4EF6;<br>
+7 addEventListener()&#x65B9;&#x6CD5;&#x6DFB;&#x52A0;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x4E3A;&#x591A;&#x4E2A;&#xFF0C;&#x5B83;&#x4EEC;&#x4F1A;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x89E6;&#x53D1;&#x3002;</li>
+</ul>
+</li>
+<li>
+<p>&#x89E3;&#x91CA;IE&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#x548C;DOM2&#x4E8B;&#x4EF6;&#x4F20;&#x64AD;&#x673A;&#x5236;&#xFF1F;</p>
+<ul>
+<li>
+<p>DOM&#x4E8B;&#x4EF6;&#x6D41;&#xFF08;event flow &#xFF09;&#x5B58;&#x5728;&#x4E09;&#x4E2A;&#x9636;&#x6BB5;&#xFF1A;<strong>&#x4E8B;&#x4EF6;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x3001;&#x5904;&#x4E8E;&#x76EE;&#x6807;&#x9636;&#x6BB5;&#x3001;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x3002;</strong></p>
+</li>
+<li>
+<p>IE&#x65F6;&#x95F4;&#x53EA;&#x6709;&#x5192;&#x6CE1;&#x4F20;&#x64AD;&#x673A;&#x5236;&#xFF1A;&#x4ECE;&#x63A5;&#x6536;&#x7684;&#x5B50;&#x5143;&#x7D20;&#xFF0C;&#x7531;&#x5185;&#x5230;&#x5916;&#x8FDB;&#x884C;&#x4E8B;&#x4EF6;&#x4F20;&#x64AD;&#xFF0C;&#x76F4;&#x5230;&#x6839;&#x8282;&#x70B9;&#x3002;&#x5982;.btn&gt;div&gt;body&gt;html</p>
+</li>
+<li>
+<p>DOM2&#x4E8B;&#x4EF6;&#x4F20;&#x64AD;&#x673A;&#x5236;&#xFF1A;&#x5305;&#x542B;&#x6240;&#x6709;DOM&#x65F6;&#x95F4;&#x6D41;&#x9636;&#x6BB5;&#xFF0C;&#x4E8B;&#x4EF6;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x2192;&#x5904;&#x4E8E;&#x76EE;&#x6807;&#x9636;&#x6BB5;&#x2192;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#xFF0C;&#x5982;&#x5F53;&#x9F20;&#x6807;&#x70B9;&#x51FB;&#x6216;&#x8005;&#x89E6;&#x53D1;dom&#x4E8B;&#x4EF6;&#x65F6;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x5F00;&#x59CB;<strong>&#x7531;&#x5916;&#x5230;&#x5185;</strong>&#x8FDB;&#x884C;&#x4E8B;&#x4EF6;&#x4F20;&#x64AD;&#xFF0C;&#x5373;&#x70B9;&#x51FB;&#x4E86;&#x5B50;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x679C;&#x7236;&#x5143;&#x7D20;&#x901A;&#x8FC7;&#x4E8B;&#x4EF6;&#x6355;&#x83B7;&#x65B9;&#x5F0F;&#x6CE8;&#x518C;&#x4E86;&#x5BF9;&#x5E94;&#x7684;&#x4E8B;&#x4EF6;&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x5148;&#x89E6;&#x53D1;&#x7236;&#x5143;&#x7D20;&#x7ED1;&#x5B9A;&#x7684;&#x4E8B;&#x4EF6;&#x3002;</p>
+<pre><code>document.getElementById(&apos;btn&apos;).addEventListener(&apos;click&apos;, function(event){
+  console.log(&apos;&#x5192;&#x6CE1;btn&apos;);
+});
+document.body.addEventListener(&apos;click&apos;, function(event){
+  console.log(&apos;&#x5192;&#x6CE1;body&apos;);
+});
+</code></pre>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-c0a9d3c19cbf6140.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+<div class="image-caption">&#x5192;&#x6CE1;&#x7ED3;&#x679C;</div>
+</div>
+<pre><code>document.getElementById(&apos;btn&apos;).addEventListener(&apos;click&apos;, function(event){
+  console.log(&apos;&#x5192;&#x6CE1;btn&apos;);
+});
+document.body.addEventListener(&apos;click&apos;, function(event){
+  console.log(&apos;&#x5192;&#x6CE1;body&apos;);
+}, true);
+</code></pre>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-46b8ff1a014ea777.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+<div class="image-caption">&#x6355;&#x83B7;&#x7ED3;&#x679C;</div>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>&#x5982;&#x4F55;&#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#xFF1F; &#x5982;&#x4F55;&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x4E8B;&#x4EF6;&#xFF1F;</p>
+<ul>
+<li>
+<p>&#x9488;&#x5BF9;&#x975E;IE&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x5728;&#x76D1;&#x542C;&#x4E8B;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;stopPropagation()&#x7528;&#x4E8E;&#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;;preventDefault()&#x7528;&#x4E8E;&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x4E8B;&#x4EF6;</p>
+</li>
+<li>
+<p>&#x9488;&#x5BF9;IE&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x5728;&#x76D1;&#x542C;&#x4E8B;&#x4EF6;&#x4E2D;&#x4EE4;&#x5C5E;&#x6027;cancelBubble=true&#x5373;&#x53EF;&#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#xFF0C;&#x4EE4;&#x5C5E;&#x6027;returnValue=false&#x53EF;&#x963B;&#x6B62;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;</p>
+<pre><code>function getEvent(e) {
+return e || window.event;
+}
+function getTarget(e) {
+return e.target || e.scrElement;
+}
+function preventDefault(e) {
+if (e.preventDefault)
+  e.preventDefault();
+else
+  e.returnValue = false;
+}
+function stopPropagation(e) {
+if (e.stopPropagation)
+  e.stopPropagation();
+else
+  e.cancelBubble = true;
+}
+
+document.getElementById(&apos;btn&apos;).addEventListener(&apos;click&apos;, function(event){
+  event.stopPropagation();
+  console.log(&apos;&#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;btn&apos;);
+});
+document.body.addEventListener(&apos;click&apos;, function(event){
+  console.log(&apos;body&apos;);
+});
+</code></pre>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-12fd36638e77687e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+<div class="image-caption">&#x963B;&#x6B62;&#x65F6;&#x95F4;&#x5192;&#x6CE1;&#x7684;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x7ED3;&#x679C;</div>
+</div>
+<pre><code>document.getElementById(&apos;btn&apos;).addEventListener(&apos;click&apos;, function(event){
+  event.preventDefault();
+  console.log(&apos;btn&apos;);
+});//&#x53D6;&#x6D88;&#x9ED8;&#x8BA4;&#x4E8B;&#x4EF6;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-ae2b5a477e41c3f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+</div>
+<p><a href="http://book.jirengu.com/jirengu-inc/jrg-vip9/members/%E6%9D%A8%E7%84%B6/%E4%BB%BB%E5%8A%A1%E7%8F%AD%E9%A2%84%E4%B9%A0/%E4%BB%BB%E5%8A%A122DOM-%E4%BA%8B%E4%BB%B6.html">&#x4EE3;&#x7801;1</a></p>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-8e2269751c045529.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+</div>
+<p><a href="http://book.jirengu.com/jirengu-inc/jrg-vip9/members/%E6%9D%A8%E7%84%B6/%E4%BB%BB%E5%8A%A1%E7%8F%AD%E9%A2%84%E4%B9%A0/%E4%BB%BB%E5%8A%A122DOM-%E4%BA%8B%E4%BB%B62.html">&#x4EE3;&#x7801;2</a></p>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-8e328e72ab8d432c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+</div>
+<p><a href="http://book.jirengu.com/jirengu-inc/jrg-vip9/members/%E6%9D%A8%E7%84%B6/%E4%BB%BB%E5%8A%A1%E7%8F%AD%E9%A2%84%E4%B9%A0/%E4%BB%BB%E5%8A%A122DOM-%E4%BA%8B%E4%BB%B63.html">&#x4EE3;&#x7801;3</a></p>
+<div class="image-package">![](http://upload-images.jianshu.io/upload_images/2155778-abc7523d9ef12252.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+</div>
+<p><a href="http://7xnk1s.com2.z0.glb.qiniucdn.com/tab.gif">&#x5B9E;&#x73B0;</a><br>
+<a href="http://book.jirengu.com/jirengu-inc/jrg-vip9/members/%E6%9D%A8%E7%84%B6/%E4%BB%BB%E5%8A%A1%E7%8F%AD%E9%A2%84%E4%B9%A0/%E4%BB%BB%E5%8A%A122DOM-%E4%BA%8B%E4%BB%B64.html">&#x4EE3;&#x7801;4</a></p>
+<p><a href="http://7xnk1s.com2.z0.glb.qiniucdn.com/dialog.gif">&#x5B9E;&#x73B0;&#x6A21;&#x6001;&#x6846;</a><br>
+<a href="http://book.jirengu.com/jirengu-inc/jrg-vip9/members/%E6%9D%A8%E7%84%B6/%E4%BB%BB%E5%8A%A1%E7%8F%AD%E9%A2%84%E4%B9%A0/%E4%BB%BB%E5%8A%A122DOM-%E4%BA%8B%E4%BB%B6%E6%91%B8%E6%80%81%E6%A1%86.html">&#x4EE3;&#x7801;5</a></p>
+<p><code>&#x672C;&#x535A;&#x5BA2;&#x7248;&#x6743;&#x5F52; &#x672C;&#x4EBA;&#x548C;&#x9965;&#x4EBA;&#x8C37;&#x6240;&#x6709;&#xFF0C;&#x8F6C;&#x8F7D;&#x9700;&#x8BF4;&#x660E;&#x6765;&#x6E90;</code></p>
+
+			</div>
+
+		</div>
+
+		<script src="http://cdn.jirengu.com/ppt-cli/js/lib/head.min.js"></script>
+		<script src="http://cdn.jirengu.com/ppt-cli/js/lib/reveal.js"></script>
+		<script src="http://cdn.jirengu.com/ppt-cli/js/lib/classList.js"></script>
+		<script src="http://cdn.jirengu.com/ppt-cli/js/plugin/highlight/highlight.js"></script>
+		<script src="http://cdn.jirengu.com/ppt-cli/js/plugin/zoom-js/zoom.js"></script>
+		<script src="http://cdn.jirengu.com/ppt-cli/js/plugin/notes/notes.js"></script>
+
+		
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				transition: 'slide' // none/fade/slide/convex/concave/zoom
+			});
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+			    runScript(event.currentSlide);
+			} );
+
+			hljs.initHighlightingOnLoad();
+
+			function runScript(section){
+				var scriptStr = section.getAttribute('data-script');
+				if(scriptStr){
+					scriptStr = decodeURIComponent(scriptStr);
+					var tag = document.createElement('script');
+					tag.innerHTML = scriptStr;
+					document.head.appendChild(tag);
+				}
+
+			}
+		</script>
+
+	</body>
+</html>
